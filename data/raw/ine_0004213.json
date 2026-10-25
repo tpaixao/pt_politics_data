@@ -1,0 +1,2033 @@
+{
+ "varcd": "0004213",
+ "indicador": "Desigualdade na distribuição de rendimentos S80/S20 (N.º) por Sexo e Grupo etário; Anual - INE, Inquérito às condições de vida e rendimento",
+ "extracao": "2026-10-25T22:22:46.828Z",
+ "dados": {
+  "2003": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,4",
+    "valor": "6.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7,1",
+    "valor": "7.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7,0",
+    "valor": "7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,8",
+    "valor": "6.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "7,3",
+    "valor": "7.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "7,1",
+    "valor": "7.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,8",
+    "valor": "6.8"
+   }
+  ],
+  "2004": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7,0",
+    "valor": "7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7,0",
+    "valor": "7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,8",
+    "valor": "6.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "7,3",
+    "valor": "7.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "7,1",
+    "valor": "7.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,9",
+    "valor": "6.9"
+   }
+  ],
+  "2005": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,4",
+    "valor": "6.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,9",
+    "valor": "6.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,7",
+    "valor": "6.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "7,0",
+    "valor": "7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,8",
+    "valor": "6.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   }
+  ],
+  "2006": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,5",
+    "valor": "6.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,5",
+    "valor": "6.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   }
+  ],
+  "2007": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   }
+  ],
+  "2008": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   }
+  ],
+  "2009": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,8",
+    "valor": "4.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   }
+  ],
+  "2010": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,7",
+    "valor": "4.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   }
+  ],
+  "2011": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   }
+  ],
+  "2012": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,8",
+    "valor": "4.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,4",
+    "valor": "6.4"
+   }
+  ],
+  "2013": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,8",
+    "valor": "4.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,1",
+    "valor": "6.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,6",
+    "valor": "6.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,7",
+    "valor": "6.7"
+   }
+  ],
+  "2014": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "sinal_conv": "*",
+    "sinal_conv_desc": "Dado rectificado",
+    "ind_string": "5,0 *",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,2",
+    "valor": "6.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,3",
+    "valor": "6.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,5",
+    "valor": "6.5"
+   }
+  ],
+  "2015": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "6,0",
+    "valor": "6"
+   }
+  ],
+  "2016": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,8",
+    "valor": "5.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   }
+  ],
+  "2017": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   }
+  ],
+  "2018": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   }
+  ],
+  "2019": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   }
+  ],
+  "2020": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,7",
+    "valor": "5.7"
+   }
+  ],
+  "2021": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,4",
+    "valor": "5.4"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,1",
+    "valor": "5.1"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   }
+  ],
+  "2022": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,5",
+    "valor": "5.5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,6",
+    "valor": "5.6"
+   }
+  ],
+  "2023": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,9",
+    "valor": "5.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5,2",
+    "valor": "5.2"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   }
+  ],
+  "2024": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "2",
+    "dim_4_t": "Com 65 ou mais anos",
+    "ind_string": "5,3",
+    "valor": "5.3"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "4,9",
+    "valor": "4.9"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "4,8",
+    "valor": "4.8"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "M",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "4,7",
+    "valor": "4.7"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "HM",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "5,0",
+    "valor": "5"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "H",
+    "dim_4": "1",
+    "dim_4_t": "Com menos de 65 anos",
+    "ind_string": "4,7",
+    "valor": "4.7"
+   }
+  ]
+ }
+}
