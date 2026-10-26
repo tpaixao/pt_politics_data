@@ -10,6 +10,7 @@ shared tidy builder. All stdlib-only Python 3.11+ (host has no pandas).
 python3 fetch_housing.py && python3 fetch_salaries.py      # ~2-4 min each, API retries built in
 python3 fetch_immigration.py && python3 fetch_wealth.py
 python3 build_tidy.py
+python3 fetch_fund_management.py                           # BdP/BPstat real-estate funds (standalone)
 ```
 
 ## Topics
@@ -48,16 +49,38 @@ python3 build_tidy.py
   not automated here. Any "wealth inequality" infographic must either use
   income inequality + an HFCS snapshot, or state the caveat explicitly.
 
+### Real-estate investment funds (Banco de Portugal, BPstat domain 24)
+- `funds_management_monthly.csv` — monthly stocks (EUR millions), 2000-12 to
+  date: UP emitidas (VGM, the fund value under management), total assets, and
+  asset composition (non-financial assets, i.e. physical real estate; equities;
+  cash/deposits; other), plus the liability side (bank loans, other).
+  Portfolio shares over total assets included. Aug 2026: VGM 21,673 M EUR.
+- Source: BPstat API `https://bpstat.bportugal.pt/api/observations/?series_ids=<id>&lang=PT`
+  (no auth, JSON, full history in one call; retry via `common.fetch_json`).
+  Series ids and a 140-series index of domain-24 "fundos imobiliários" series
+  in `data/raw/bpstat_domain24_series_index.md`.
+- Caveat: BdP balance-sheet series do NOT split real-estate holdings between
+  residential (habitação) and commercial. That split exists only in CMVM's
+  "Indicadores mensais sobre fundos de investimento imobiliário" tables, which
+  vanished from the public web with the cmvm.pt portal redesign
+  (www.cmvm.pt/PInstitucional/PeriodicStatistics showed placeholder content as
+  of late Oct 2026; the OutSystems single-page app cannot be rendered
+  server-side or via Jina). Until CMVM restores the tables, automated
+  housing-vs-commercial composition is not fetchable; the BdP series are the
+  automated source. BdP and CMVM vehicle scopes (FII/FEII/FUNGEPI) differ, so
+  never mix the two in one chart without stating the definition.
+
 ## Sources and licence
 All INE indicators via the INE JSON API
 (`json_indicador/pindica.jsp?op=2&varcd=<code>&Dim1=T&lang=PT`); descriptions
 of every fetched indicator in `data/tidy/_indicators.json`.
 INE data licence: CC BY 4.0 (reutilizável com atribuição).
 Quadros de Pessoal indicators are MTSSS/GEP, carried by INE's API.
+BdP/BPstat statistics: free reuse with attribution to Banco de Portugal.
 
 Complementary non-INE sources for context (not fetched):
 - Pordata: same INE data repackaged + per-m² from escrituras
-- Banco de Portugal: housing statistics, HFCS
+- Banco de Portugal: housing statistics, HFCS; investment-fund balance sheets are fetched via BPstat in this repo
 - Eurostat: ilc series for EU comparisons (ilc_di12 Gini, ilc_di11 S80/S20), prc_hpi_q
 
 ## Refresh
