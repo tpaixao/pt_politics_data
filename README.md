@@ -10,6 +10,8 @@ shared tidy builder. All stdlib-only Python 3.11+ (host has no pandas).
 python3 fetch_housing.py && python3 fetch_salaries.py      # ~2-4 min each, API retries built in
 python3 fetch_immigration.py && python3 fetch_wealth.py
 python3 fetch_housing_stock.py                             # Censos stock/tenure + Eurostat tenure
+python3 fetch_housing_dynamics.py                          # vacancy-model series (0011724/0013247/0013248/0013356)
+python3 scripts/slice_pt_raws.py                           # after a vacancy-model refetch, before committing (see raw-data note)
 python3 build_tidy.py
 python3 fetch_fund_management.py                           # BdP/BPstat real-estate funds (standalone)
 ```
@@ -103,7 +105,6 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
 
 ### Salaries (INE / MTSSS-GEP Quadros de Pessoal)
 - `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
-- `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
   by sex and age group (2021–2024, current methodology)
 - `salaries_annual_rem.csv` — average ANNUAL remuneration per employee
   (Base 2021), 1995–2023, Portugal total. The long series; use for trend plots.
@@ -166,7 +167,8 @@ Complementary non-INE sources for context (not fetched):
   ilc_lvho02 (tenure of population) is fetched (`fetch_housing_stock.py`)
 
 ## Refresh
-Re-run the five fetch scripts then `build_tidy.py`. Most recent INE values
-can be provisional (flagged 'd'/'provisório' by INE); refetching picks up
-revisions. The API is flaky (503/timeouts) — fetch scripts retry with backoff;
-allow ~5–10 min for a full refresh.
+Re-run the six fetch scripts then `build_tidy.py`. After refetching
+`fetch_housing_dynamics.py`, run `scripts/slice_pt_raws.py` before committing.
+Most recent INE values can be provisional (flagged 'd'/'provisório' by INE);
+refetching picks up revisions. The API is flaky (503/timeouts) — fetch
+scripts retry with backoff; allow ~5–10 min for a full refresh.
