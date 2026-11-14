@@ -1,0 +1,1388 @@
+{
+ "varcd": "0013247",
+ "indicador": "Edifícios concluídos (N.º) por Localização geográfica (NUTS - 2024), Tipo de obra e Destino da obra; Anual - INE, Estatísticas das obras concluídas",
+ "extracao": "2026-11-14T14:16:46.338Z",
+ "_note": "Compact extract of the INE API response (PT-level records only); full NUTS-2024 territorial detail was dropped for repository size limits and is refetchable with fetch_housing_dynamics.py",
+ "dados": {
+  "2011": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 128",
+    "valor": "2128"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 105",
+    "valor": "4105"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "4 552",
+    "valor": "4552"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "6 233",
+    "valor": "6233"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6 680",
+    "valor": "6680"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "15 434",
+    "valor": "15434"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "19 539",
+    "valor": "19539"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "19 986",
+    "valor": "19986"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "26 219",
+    "valor": "26219"
+   }
+  ],
+  "2012": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 073",
+    "valor": "2073"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 781",
+    "valor": "3781"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "4 198",
+    "valor": "4198"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "5 854",
+    "valor": "5854"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "6 271",
+    "valor": "6271"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "12 362",
+    "valor": "12362"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "16 143",
+    "valor": "16143"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "16 560",
+    "valor": "16560"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "22 414",
+    "valor": "22414"
+   }
+  ],
+  "2013": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 726",
+    "valor": "1726"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "3 279",
+    "valor": "3279"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 316",
+    "valor": "3316"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "5 005",
+    "valor": "5005"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "5 042",
+    "valor": "5042"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "8 235",
+    "valor": "8235"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "11 514",
+    "valor": "11514"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "11 551",
+    "valor": "11551"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "16 556",
+    "valor": "16556"
+   }
+  ],
+  "2014": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 893",
+    "valor": "1893"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 585",
+    "valor": "2585"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 246",
+    "valor": "3246"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "4 478",
+    "valor": "4478"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "5 139",
+    "valor": "5139"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "5 623",
+    "valor": "5623"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "8 208",
+    "valor": "8208"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "8 869",
+    "valor": "8869"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "13 347",
+    "valor": "13347"
+   }
+  ],
+  "2015": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 581",
+    "valor": "1581"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 346",
+    "valor": "2346"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 908",
+    "valor": "2908"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 927",
+    "valor": "3927"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 489",
+    "valor": "4489"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "4 974",
+    "valor": "4974"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "7 320",
+    "valor": "7320"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7 882",
+    "valor": "7882"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "11 809",
+    "valor": "11809"
+   }
+  ],
+  "2016": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 223",
+    "valor": "1223"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 033",
+    "valor": "2033"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 606",
+    "valor": "2606"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 256",
+    "valor": "3256"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 829",
+    "valor": "3829"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "5 197",
+    "valor": "5197"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "7 230",
+    "valor": "7230"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "7 803",
+    "valor": "7803"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "11 059",
+    "valor": "11059"
+   }
+  ],
+  "2017": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 280",
+    "valor": "1280"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "1 957",
+    "valor": "1957"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 778",
+    "valor": "2778"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 237",
+    "valor": "3237"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 058",
+    "valor": "4058"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "5 633",
+    "valor": "5633"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "7 590",
+    "valor": "7590"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "8 411",
+    "valor": "8411"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "11 648",
+    "valor": "11648"
+   }
+  ],
+  "2018": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 156",
+    "valor": "1156"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 012",
+    "valor": "2012"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 713",
+    "valor": "2713"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 168",
+    "valor": "3168"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 869",
+    "valor": "3869"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "6 635",
+    "valor": "6635"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "8 647",
+    "valor": "8647"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "9 348",
+    "valor": "9348"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "12 516",
+    "valor": "12516"
+   }
+  ],
+  "2019": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 303",
+    "valor": "1303"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 271",
+    "valor": "2271"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 977",
+    "valor": "2977"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 574",
+    "valor": "3574"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 280",
+    "valor": "4280"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "7 614",
+    "valor": "7614"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "9 885",
+    "valor": "9885"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "10 591",
+    "valor": "10591"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "14 165",
+    "valor": "14165"
+   }
+  ],
+  "2020": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 117",
+    "valor": "1117"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 264",
+    "valor": "2264"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 042",
+    "valor": "3042"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 381",
+    "valor": "3381"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 159",
+    "valor": "4159"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "8 930",
+    "valor": "8930"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "11 194",
+    "valor": "11194"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "11 972",
+    "valor": "11972"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "15 353",
+    "valor": "15353"
+   }
+  ],
+  "2021": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 186",
+    "valor": "1186"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 510",
+    "valor": "2510"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 150",
+    "valor": "3150"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 696",
+    "valor": "3696"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 336",
+    "valor": "4336"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "10 315",
+    "valor": "10315"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "12 825",
+    "valor": "12825"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "13 465",
+    "valor": "13465"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "17 161",
+    "valor": "17161"
+   }
+  ],
+  "2022": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "1 053",
+    "valor": "1053"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 451",
+    "valor": "2451"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 024",
+    "valor": "3024"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 504",
+    "valor": "3504"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "4 077",
+    "valor": "4077"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "11 008",
+    "valor": "11008"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "13 459",
+    "valor": "13459"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "14 032",
+    "valor": "14032"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "17 536",
+    "valor": "17536"
+   }
+  ],
+  "2023": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "985",
+    "valor": "985"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 326",
+    "valor": "2326"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 922",
+    "valor": "2922"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 311",
+    "valor": "3311"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 907",
+    "valor": "3907"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "10 729",
+    "valor": "10729"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "13 055",
+    "valor": "13055"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "13 651",
+    "valor": "13651"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "16 962",
+    "valor": "16962"
+   }
+  ],
+  "2024": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "976",
+    "valor": "976"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 154",
+    "valor": "2154"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 858",
+    "valor": "2858"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 130",
+    "valor": "3130"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 834",
+    "valor": "3834"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "11 504",
+    "valor": "11504"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "13 658",
+    "valor": "13658"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "14 362",
+    "valor": "14362"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "17 492",
+    "valor": "17492"
+   }
+  ],
+  "2025": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "891",
+    "valor": "891"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "2 158",
+    "valor": "2158"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "2 790",
+    "valor": "2790"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Ampliações, alterações e reconstruções",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "3 049",
+    "valor": "3049"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "2",
+    "dim_4_t": "Outros",
+    "ind_string": "3 681",
+    "valor": "3681"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "11 125",
+    "valor": "11125"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "1",
+    "dim_4_t": "Habitação familiar",
+    "ind_string": "13 283",
+    "valor": "13283"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Construções novas",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "13 915",
+    "valor": "13915"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total de obras de edificação",
+    "dim_4": "T",
+    "dim_4_t": "Total",
+    "ind_string": "16 964",
+    "valor": "16964"
+   }
+  ]
+ }
+}

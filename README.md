@@ -47,6 +47,60 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
   Person-weighted survey shares — NOT comparable with the census dwelling
   counts above; cite one or the other, never mix.
 
+### Housing vacancy estimate, 2025 (residual model, INE)
+- `housing_completions.csv` — dwellings completed per year: the INE long
+  series 0011724 (`fogos_concluidos`, 1969–2025) alongside 0013248
+  (`fogos_concluidos_construcoes_novas_hab_familiar`, 2011–2025). The two
+  INE sources disagree (2025: 19,971 vs 27,301; 2022: 19,379 vs 21,047):
+  they come from different survey universes — "Inquérito aos projetos de
+  obras de edificação e de demolição de edifícios" vs "Estatísticas das
+  obras concluídas". The vacancy model uses the conservative long series
+  0011724; the residual estimate is therefore slightly biased toward fewer
+  new dwellings (lower vacancy) if 0013248 is the truer count.
+- Raw-data note: `data/raw/ine_0013247.json` and `ine_0013248.json` are
+  stored as PT-level extracts (same schema plus a `_note` field); the full
+  NUTS-2024 responses behind them are 56–135 MB, beyond GitHub's file limits
+  (50 MB warn, 100 MB hard). Rerunning `fetch_housing_dynamics.py`
+  regenerates the full-size files — run `python3 scripts/slice_pt_raws.py`
+  before any recommit.
+- `housing_vacancy_decomposition.csv` + `housing_vacancy_scenarios.csv` —
+  residual estimate of habitually vacant dwellings after Censos 2021
+  (indicators: 0012499 baseline, 0011724 completions, 0013356 population
+  estimates). Method: vacant stock evolves from the Censos 2021 baseline
+  (723,215 vacant of 5,981,482 dwellings) adding completions and
+  subtracting estimated household growth at constant average household
+  size (Censos 2021 resident population 10,347,892 / 4,149,096
+  households = 2.494 people per household). Because the revised
+  31-Dec-2021 population estimate (10,599,117) is +251,225 above the
+  census count, two anchor variants are published:
+  `estimates` (households base scaled up with the revised population,
+  internally consistent Dec-2021 → Dec-2025 change) and `census`
+  (unscaled census households base; attributes the whole census→2025
+  population change to 2022–2025 household growth and lands low). 2025
+  results: census anchor 368,294; estimates anchor 469,025, central
+  (estimates anchor, demolitions 2,000/yr) 461,025; scenario band low
+  290,529 – high 494,259 (`housing_vacancy_scenarios.csv`).
+- Assumptions: (1) no annual household-count series exists in the INE
+  API (every Agregados domésticos indicator is Decenal), so household
+  size is constant per census, with 2.40–2.70 sensitivity; (2) the INE
+  API has no demolition series — monthly licensed-works indicators
+  (e.g. 0012096/0012097) report only "Construções novas" / "Outras
+  obras" / a total that includes demolition with no split — so
+  demolitions enter as an assumed 0–4,000/yr constant; (3) secondary/
+  seasonal dwellings (1,104,881 in 2021) are held constant except in
+  the low scenario (+1%/yr); (4) the model cannot distinguish where new
+  households settle or that some of the +825k population 2022–2025
+  (immigration-driven) live in collective or non-private arrangements,
+  which would reduce the needed dwelling stock and make the vacancy
+  estimate an upper bound on that margin. Census-to-census vacancy fell
+  543,777 (2001) → 735,128 (2011) → 723,215 (2021); this model puts the
+  2025 vacancy near 460–470k (7.7–7.8% of ~6.06M dwellings), i.e. a drop
+  of roughly a quarter of a million dwellings in four years, mostly
+  absorbed by immigrant household formation against only ~77k
+  completions. (An earlier rough "700–800k" band assumed smaller
+  household growth from a census-vintage population; it is superseded
+  by the live-data decomposition above.)
+
 ### Salaries (INE / MTSSS-GEP Quadros de Pessoal)
 - `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
 - `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,

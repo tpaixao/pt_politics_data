@@ -206,6 +206,168 @@ def housing_stock():
                'tenant_market_rent_pct', 'tenant_reduced_or_free_pct'], rows)
 
 
+def housing_vacancy_estimate():
+    """Residual estimate of habitually vacant dwellings after Censos 2021.
+
+    Method (documented in README): vacant stock evolves from the Censos 2021
+    baseline (0012499) by adding dwellings completed (0011724) and
+    subtracting the estimated growth in households, held at constant average
+    household size (Censos 2021: pop / households). Household growth is
+    driven by the annual resident-population estimates (0013356). Because the
+    Censos 2021 census population (10,347,892) and the revised 31-Dec-2021
+    estimate (10,599,117) disagree by +251,225, two anchor variants are
+    produced: 'estimates' (households base scaled upward with the revised
+    population, internally consistent Dec-2021 -> Dec-2025 change) and
+    'census' (unscaled census households base, change taken against the
+    census population). Demolitions are an assumed constant (INE publishes
+    no demolition series) and secondary-home growth is an assumed rate.
+    """
+    # census 2021 baseline: all dwellings by occupation status (0012499)
+    s = load_series('0012499')
+    vac21 = tot21 = None
+    for rec in s['dados']['2021']:
+        if rec.get('geocod') == 'PT':
+            if rec.get('dim_3_t') == 'Vagos':
+                vac21 = num(rec['valor'])
+            elif rec.get('dim_3_t') == 'Total':
+                tot21 = num(rec['valor'])
+    if vac21 != 723215 or tot21 != 5981482:
+        raise RuntimeError(
+            f'0012499 census baseline drifted: vagos={vac21}, total={tot21}'
+            ' (reference: 723215 / 5981482 in Censos 2021)')
+
+    # dwellings completed, long series (0011724)
+    comps = {}
+    for p, recs in periods_of(load_series('0011724')):
+        for r in pt_records(recs):
+            v = num(r.get('valor'))
+            if v != '':
+                comps[p] = v
+
+    # dwellings completed in new construction for family housing (0013248):
+    # alternate INE source kept for the two-series comparison in README
+    comps_new = {}
+    for p, recs in periods_of(load_series('0013248')):
+        for r in pt_records(recs):
+            if r.get('dim_3_t') == 'Total':
+                v = num(r.get('valor'))
+                if v != '':
+                    comps_new[p] = v
+
+    years = sorted(set(comps) | set(comps_new))
+    rows = [{'ano': y,
+             'fogos_concluidos': comps.get(y, ''),
+             'fogos_concluidos_construcoes_novas_hab_familiar':
+                 comps_new.get(y, '')} for y in years]
+    write_csv('housing_completions.csv',
+              ['ano', 'fogos_concluidos',
+               'fogos_concluidos_construcoes_novas_hab_familiar'], rows)
+
+    # resident population estimates, annual (0013356): HM rows summed
+    # over the three urban typologies (verified national totals:
+    # 2021: 10,599,117 / 2025: 11,424,031)
+    pop = {}
+    for p, recs in periods_of(load_series('0013356')):
+        vals = [num(r.get('valor')) for r in pt_records(recs)
+                if r.get('dim_3_t') == 'HM' and num(r.get('valor')) != '']
+        pop[p] = sum(vals)
+    if abs(pop['2025'] - 11424031) > 1 or abs(pop['2021'] - 10599117) > 1:
+        raise RuntimeError(
+            f'0013356 population estimates drifted: {pop}')
+
+    # census constants (Censos 2021 definitive results; documented in README,
+    # not reproducible from the fetched series)
+    cen_pop = 10347892
+    cen_hh = 4149096
+    size = cen_pop / cen_hh
+    hh_base_scaled = cen_hh * (pop['2021'] / cen_pop)
+
+    def decompose(anchor, size_, dem_y, sec_pct):
+        """Per-year vacancy path under one scenario; dict year -> fields."""
+        out = {}
+        stock_hh = cen_hh if anchor == 'census' else hh_base_scaled
+        vacant = vac21
+        secondary = 1104881  # Censos 2021 secondary/saasonal dwellings
+        prev_pop = cen_pop if anchor == 'census' else pop['2021']
+        for y in ('2022', '2023', '2024', '2025'):
+            dpop = pop[y] - prev_pop
+            dhh = dpop / size_
+            stock_hh += dhh
+            comp = comps.get(y, 0)
+            dem = dem_y
+            sec_g = secondary * sec_pct
+            secondary += sec_g
+            vacant = vacant + comp - dhh - dem - sec_g
+            prev_pop = pop[y]
+            out[y] = {'ano': y,
+                      'variante_ancoragem': anchor,
+                      'populacao_residente_est': pop[y],
+                      'variacao_populacao': dpop,
+                      'tamanho_hh': round(size_, 4),
+                      'crescimento_hh': round(dhh),
+                      'stock_hh_estimado': round(stock_hh),
+                      'fogos_concluidos': comps.get(y, ''),
+                      'demolicoes_supostas': dem,
+                      'crescimento_resid_secundarias': round(sec_g),
+                      'vagos_estimados': round(vacant),
+                      'vagos_censo_2021': vac21}
+        out['2021'] = {'ano': '2021', 'variante_ancoragem': anchor,
+                       'populacao_residente_est': pop['2021'],
+                       'variacao_populacao': '', 'tamanho_hh': round(size_, 4),
+                       'crescimento_hh': '',
+                       'stock_hh_estimado': (cen_hh if anchor == 'census'
+                                             else round(hh_base_scaled)),
+                       'fogos_concluidos': '', 'demolicoes_supostas': '',
+                       'crescimento_resid_secundarias': '',
+                       'vagos_estimados': vac21, 'vagos_censo_2021': vac21}
+        return out
+
+    # two published variants: internally-consistent estimates anchor and the
+    # conservative census anchor (larger household growth, smaller vacancy)
+    dec = decompose('estimates', size, 0, 0)  # raw path, no adjustments
+    dec_cen = decompose('census', size, 0, 0)
+    rows = []
+    for variant in (dec, dec_cen):
+        rows.extend(variant[y] for y in ('2021', '2022', '2023', '2024',
+                                         '2025'))
+    cols = ['variante_ancoragem', 'ano', 'populacao_residente_est',
+            'variacao_populacao', 'tamanho_hh', 'crescimento_hh',
+            'stock_hh_estimado', 'fogos_concluidos', 'demolicoes_supostas',
+            'crescimento_resid_secundarias', 'vagos_estimados',
+            'vagos_censo_2021']
+    rows.sort(key=lambda x: (x['variante_ancoragem'], x['ano']))
+    write_csv('housing_vacancy_decomposition.csv', cols, rows)
+
+    # scenario grid, 2025 vacancy: anchors x sizes, with named corners
+    scen = []
+    for anchor in ('estimates', 'census'):
+        path = decompose(anchor, size, 0, 0)  # to reuse the final-year calc
+        for s_ in (2.40, size, 2.70):
+            pth = decompose(anchor, s_, 0, 0)
+            scen.append({'cenario': f'{anchor}_tamanho{round(s_, 2)}',
+                         'ancoragem': anchor,
+                         'tamanho_hh': round(s_, 4),
+                         'demolicoes_por_ano': 0,
+                         'cresc_secundarias_pct_ano': 0,
+                         'vagos_2025': pth['2025']['vagos_estimados']})
+    v_low = decompose('census', 2.40, 4000, 0.01)['2025']['vagos_estimados']
+    v_high = decompose('estimates', 2.70, 0, 0)['2025']['vagos_estimados']
+    v_cen = decompose('estimates', size, 2000, 0)['2025']['vagos_estimados']
+    scen.append({'cenario': 'low', 'ancoragem': 'census',
+                 'tamanho_hh': 2.4, 'demolicoes_por_ano': 4000,
+                 'cresc_secundarias_pct_ano': 1, 'vagos_2025': v_low})
+    scen.append({'cenario': 'high', 'ancoragem': 'estimates',
+                 'tamanho_hh': 2.7, 'demolicoes_por_ano': 0,
+                 'cresc_secundarias_pct_ano': 0, 'vagos_2025': v_high})
+    scen.append({'cenario': 'central', 'ancoragem': 'estimates',
+                 'tamanho_hh': round(size, 4), 'demolicoes_por_ano': 2000,
+                 'cresc_secundarias_pct_ano': 0, 'vagos_2025': v_cen})
+    scen.sort(key=lambda x: x['vagos_2025'])
+    write_csv('housing_vacancy_scenarios.csv',
+              ['cenario', 'ancoragem', 'tamanho_hh', 'demolicoes_por_ano',
+               'cresc_secundarias_pct_ano', 'vagos_2025'], scen)
+
+
 def salaries():
     # detail: monthly base remuneration 2021-2024 (0014410)
     s = load_series('0014410')
@@ -309,12 +471,14 @@ def main():
     os.makedirs(TIDY_DIR, exist_ok=True)
     housing()
     housing_stock()
+    housing_vacancy_estimate()
     salaries()
     immigration()
     inequality()
     meta = {}
     for var in ('0014765', '0014766', '0014767', '0014764', '0012254', '0014698',
                 '0014378', '0011491', '0006338', '0012499',
+                '0011724', '0013248', '0013247', '0013356',
                 '0014410', '0014111',
                 '0013179', '0006054', '0006055', '0006056', '0006057', '0001274',
                 '0013219', '0004212', '0004213'):

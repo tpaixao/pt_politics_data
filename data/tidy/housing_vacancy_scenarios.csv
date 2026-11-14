@@ -1,0 +1,10 @@
+cenario,ancoragem,tamanho_hh,demolicoes_por_ano,cresc_secundarias_pct_ano,vagos_2025
+low,census,2.4,4000,1,290529
+census_tamanho2.4,census,2.4,0,0,351392
+census_tamanho2.49,census,2.494,0,0,368294
+census_tamanho2.7,census,2.7,0,0,401213
+estimates_tamanho2.4,estimates,2.4,0,0,456069
+central,estimates,2.494,2000,0,461025
+estimates_tamanho2.49,estimates,2.494,0,0,469025
+estimates_tamanho2.7,estimates,2.7,0,0,494259
+high,estimates,2.7,0,0,494259
