@@ -1,0 +1,31 @@
+{
+ "source": "https://dadosabertos.turismodeportugal.pt/api/v3/datasets/4e62eb1977564991bd01e61d7aa8266f_6/downloads/data?format=csv&spatialRefId=4326",
+ "dataset_id": "4e62eb1977564991bd01e61d7aa8266f_6",
+ "last_modified": "2026-11-13T07:25:39.000Z",
+ "downloaded_utc": "2026-11-14T20:40:19Z",
+ "rows": 112118,
+ "fields": [
+  "X",
+  "Y",
+  "OBJECTID",
+  "NrRNAL",
+  "Denominacao",
+  "DataRegisto",
+  "DataAberturaPublico",
+  "Modalidade",
+  "NrUtentes",
+  "Endereco",
+  "CodigoPostal",
+  "LOCALIDADE",
+  "LatLong",
+  "FiabilidadeGeo",
+  "DTMNFR",
+  "Freguesia",
+  "Concelho",
+  "Distrito",
+  "NUTSIII",
+  "NUTSII",
+  "ERT",
+  "SeloCleanSafe"
+ ]
+}

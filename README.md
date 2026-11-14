@@ -11,6 +11,7 @@ python3 fetch_housing.py && python3 fetch_salaries.py      # ~2-4 min each, API 
 python3 fetch_immigration.py && python3 fetch_wealth.py
 python3 fetch_housing_stock.py                             # Censos stock/tenure + Eurostat tenure
 python3 fetch_housing_dynamics.py                          # vacancy-model series (0011724/0013247/0013248/0013356)
+python3 scripts/fetch_al_licenses.py                       # RNAL open-data register (Turismo de Portugal)
 python3 scripts/slice_pt_raws.py                           # after a vacancy-model refetch, before committing (see raw-data note)
 python3 build_tidy.py
 python3 fetch_fund_management.py                           # BdP/BPstat real-estate funds (standalone)
@@ -120,10 +121,54 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
   543,777 (2001) → 735,128 (2011) → 723,215 (2021); this model puts the
   2025 vacancy near 460–470k (7.7–7.8% of ~6.06M dwellings), i.e. a drop
   of roughly a quarter of a million dwellings in four years, mostly
-  absorbed by immigrant household formation against only ~77k
-  completions. (An earlier rough "700–800k" band assumed smaller
-  household growth from a census-vintage population; it is superseded
-  by the live-data decomposition above.)
+    absorbed by immigrant household formation against only ~77k
+    completions. (An earlier rough "700–800k" band assumed smaller
+    household growth from a census-vintage population; it is superseded
+    by the live-data decomposition above.)
+
+### Alojamento Local registrations (Turismo de Portugal, RNAL open data)
+
+Files: `al_registrations_annual.csv` (new registrations by registration
+year + modality splits), `al_registrations_modalidade.csv` (register
+totals by modality, share and total utentes), `al_registrations_distritos.csv`
+(totals by district). Raw file: `data/raw/rnal_al_registos.csv`
+(37 MB, gitignored, refetch with `python3 scripts/fetch_al_licenses.py`);
+`data/raw/rnal_snapshot.json` keeps the provenance stamp.
+
+Source: Turismo de Portugal open-data portal (ArcGIS Hub), dataset
+"Estabelecimentos de Alojamento Local", backend feature service
+`geo.turismodeportugal.pt/server/rest/services/TDP/OpenData_AL/MapServer/6`;
+TDP refreshes the file continuously (`lastModified` in the snapshot JSON).
+Coverage is continental Portugal only: 18 distritos, no Açores/Madeira.
+
+Snapshot 2026-11-13: 112,118 records, total utentes 653,887
+(~5.8 per establishment). Apartamento 59.2% + Moradia 32.4% ≈ 92% whole
+dwellings; estabelecimento de hospedagem 6,122 (5.5%), quartos 2,597,
+hostel 714. Geography: Faro 40.0%, Lisboa 17.0%, Porto 12.8%.
+
+Caveats:
+
+- Survivorship bias: the year-of-registration counts are the records
+  surviving in the current register, not the historical annual flow.
+  Official end-year stock totals run well above surviving older cohorts
+  (54,503 at end-2017 vs ~35k surviving ≤2017 records), so pre-2018 rows
+  undercount actual activity; 2018+ rows are close to the flows TDP
+  announced at the time. Pre-2014 rows are legacy carryovers from the
+  DL 39/95 and DL 60/2012 regimes (a few thousand records).
+- Registrations are not active licences: the register holds no
+  openings/closures, and DL 76/2024 (23 Oct 2024) revoked the 5-year
+  revalidation, so entries persist indefinitely. DataAberturaPublico can
+  carry planned openings up to 2033. No official "active licences" series
+  exists; INE's tourist-accommodation statistics cover only AL units
+  with ≥10 beds.
+- The 2024 collapse is administrative: Apartamento registrations fell to
+  913 (from 6,917 in 2023) under Mais Habitação uncertainty, while
+  Moradia stayed near 3,100; 2025 recovered to 9,518.
+- Relation to the vacancy model: not an input. The vacancy identity is
+  use-agnostic, so the annual file is an overlay for narratives, not a
+  driver. As a ceiling: ~36k new registrations in 2022–2025 is an upper
+  bound on any AL-driven occupancy shift over the period, an order of
+  magnitude below immigrant household formation (~330k new households).
 
 ### Salaries (INE / MTSSS-GEP Quadros de Pessoal)
 - `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
@@ -181,6 +226,9 @@ of every fetched indicator in `data/tidy/_indicators.json`.
 INE data licence: CC BY 4.0 (reutilizável com atribuição).
 Quadros de Pessoal indicators are MTSSS/GEP, carried by INE's API.
 BdP/BPstat statistics: free reuse with attribution to Banco de Portugal.
+Turismo de Portugal open data (RNAL): public-sector open-data portal; no
+explicit reuse licence is stated on the dataset page, attribute
+"Turismo de Portugal, Dados Abertos" alongside the INE/BdP sources.
 
 Complementary non-INE sources for context (not fetched):
 - Pordata: same INE data repackaged + per-m² from escrituras

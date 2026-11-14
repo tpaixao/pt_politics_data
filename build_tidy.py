@@ -25,12 +25,18 @@ Outputs (data/tidy/):
                                   Censos 2021
   housing_eusilc_tenure.csv     - tenure status of the population (EU-SILC,
                                   % of population), annual 2004-2025
+  al_registrations_annual.csv   - new RNAL registrations per registration year
+                                  plus modality splits (survivorship caveat in
+                                  README)
+  al_registrations_modalidade.csv - register totals by modality (share, beds)
+  al_registrations_distritos.csv  - register totals by district (Continent)
   _indicators.json             - indicator descriptions fetched for audit
 """
 
 import csv
 import json
 import os
+from collections import Counter
 
 from common import (RAW_DIR, TIDY_DIR, load_series, norm_quarter, num,
                     periods_of, pt_records)
@@ -414,6 +420,66 @@ def housing_vacancy_estimate():
                'vagos_2025'], scen)
 
 
+def al_registrations():
+    # RNAL open-data register (Turismo de Portugal ArcGIS Hub), downloaded by
+    # scripts/fetch_al_licenses.py. Raw file covers continental Portugal only
+    # (18 districts; no Acores/Madeira). DataRegisto year counts are the
+    # registrations surviving in the current file (survivorship bias).
+    path = os.path.join('data', 'raw', 'rnal_al_registos.csv')
+    if not os.path.exists(path):
+        print('al_registrations: raw file missing, run scripts/fetch_al_licenses.py')
+        return
+    mod_map = {'Apartamento': 'apartamento', 'Moradia': 'moradia',
+               'EstabelecimentoHospedagem': 'estabelecimento_hospedagem',
+               'Quartos': 'quartos', 'EstabelecimentoHospedagemHostel': 'hostel'}
+    annual, mods, dists = {}, Counter(), Counter()
+    utentes = Counter()
+    with open(path, encoding='utf-8-sig') as f:
+        for r in csv.DictReader(f):
+            try:
+                ano = int((r.get('DataRegisto') or '')[:4])
+            except ValueError:
+                continue
+            a = annual.setdefault(ano, Counter())
+            mod = mod_map.get(r.get('Modalidade', ''), 'outras')
+            a['total'] += 1
+            a[mod] += 1
+            mods[mod] += 1
+            dists[r.get('Distrito', '')] += 1
+            try:
+                utentes[mod] += int(r.get('NrUtentes', 0))
+            except (ValueError, TypeError):
+                pass
+    n_total = sum(c['total'] for c in annual.values())
+    rows = []
+    for ano in sorted(annual):
+        c = annual[ano]
+        rows.append({
+            'ano': ano, 'novos_registos': c['total'],
+            'apartamento': c['apartamento'], 'moradia': c['moradia'],
+            'estabelecimento_hospedagem': c['estabelecimento_hospedagem'],
+            'quartos': c['quartos'], 'hostel': c['hostel'],
+            'outras': c['total'] - c['apartamento'] - c['moradia']
+                      - c['estabelecimento_hospedagem'] - c['quartos']
+                      - c['hostel'],
+        })
+    write_csv('al_registrations_annual.csv',
+              ['ano', 'novos_registos', 'apartamento', 'moradia',
+               'estabelecimento_hospedagem', 'quartos', 'hostel', 'outras'],
+              rows)
+    mrows = [{'modalidade': m, 'registos': n,
+              'share_pct': round(100.0 * n / n_total, 1),
+              'utentes': utentes[m]}
+             for m, n in mods.most_common()]
+    write_csv('al_registrations_modalidade.csv',
+              ['modalidade', 'registos', 'share_pct', 'utentes'], mrows)
+    drows = [{'distrito': d, 'registos': n,
+              'share_pct': round(100.0 * n / n_total, 1)}
+             for d, n in dists.most_common()]
+    write_csv('al_registrations_distritos.csv',
+              ['distrito', 'registos', 'share_pct'], drows)
+
+
 def salaries():
     # detail: monthly base remuneration 2021-2024 (0014410)
     s = load_series('0014410')
@@ -518,6 +584,7 @@ def main():
     housing()
     housing_stock()
     housing_vacancy_estimate()
+    al_registrations()
     salaries()
     immigration()
     inequality()
