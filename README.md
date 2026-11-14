@@ -79,9 +79,29 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
   internally consistent Dec-2021 → Dec-2025 change) and `census`
   (unscaled census households base; attributes the whole census→2025
   population change to 2022–2025 household growth and lands low). 2025
-  results: census anchor 368,294; estimates anchor 469,025, central
-  (estimates anchor, demolitions 2,000/yr) 461,025; scenario band low
-  290,529 – high 494,259 (`housing_vacancy_scenarios.csv`).
+   results: census anchor 368,294; estimates anchor 469,025, central
+   (estimates anchor, demolitions 2,000/yr) 461,025; scenario band low
+   290,529 – high 494,259 (`housing_vacancy_scenarios.csv`).
+   Household growth is further split into a migratory and a natural
+   component (columns `saldo_migratorio`, `crescimento_hh_migratorio`,
+   `crescimento_hh_natural`): INE's estimated net migration (0013179, the
+   migratory component of the same population estimates; 371,277 in 2022,
+   307,288 in 2023, 216,629 in 2024, 70,862 preliminary in 2025 — 966,056
+   over 2022–2025) forms immigrant households, and the residual natural
+   change (births − deaths plus statistical corrections; −141,142 over
+   2022–2025, i.e. −56,587 households at 2.494) forms the rest, so net
+   household formation 2022–2025 (330,804 households at 2.494) is
+   immigration-driven with natural change subtracting. Both components
+   default to the same constant household size, so central results are
+   unchanged from the homogeneous model; under the `census` anchor the
+   +251,225 statistical population revision is folded into its natural
+   term (84,416 in 2022). The scenarios file adds migration-split rows
+   (`*_hh_migr2.0` / `*_hh_migr3.0`): immigrant households average 2.0 or
+   3.0 members while natural-growth households keep 2.494 — INE publishes
+   no immigrant-household-size vintage, so the band just spans single
+   adults to large families. Because migration dominates growth, the
+   assumption swings the estimate widely: estimates anchor 373,347
+   (migr 2.0) to 534,357 (migr 3.0); census anchor 272,616 to 433,625.
 - Assumptions: (1) no annual household-count series exists in the INE
   API (every Agregados domésticos indicator is Decenal), so household
   size is constant per census, with 2.40–2.70 sensitivity; (2) the INE
@@ -90,9 +110,11 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
   obras" / a total that includes demolition with no split — so
   demolitions enter as an assumed 0–4,000/yr constant; (3) secondary/
   seasonal dwellings (1,104,881 in 2021) are held constant except in
-  the low scenario (+1%/yr); (4) the model cannot distinguish where new
-  households settle or that some of the +825k population 2022–2025
-  (immigration-driven) live in collective or non-private arrangements,
+  the low scenario (+1%/yr); (4) immigrant households are formed at the
+  national-average size by default (the `hh_migr` scenarios span
+  2.0–3.0 members), and the model still cannot show where new
+  households settle or that part of the +825k population 2022–2025
+  (immigration-driven) lives in collective or non-private arrangements,
   which would reduce the needed dwelling stock and make the vacancy
   estimate an upper bound on that margin. Census-to-census vacancy fell
   543,777 (2001) → 735,128 (2011) → 723,215 (2021); this model puts the
