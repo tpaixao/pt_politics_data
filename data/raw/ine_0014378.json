@@ -1,0 +1,281 @@
+{
+ "varcd": "0014378",
+ "indicador": "Alojamentos familiares clássicos à data dos Censos (Série 1950 - 2021 - N.º) por Forma de ocupação; Decenal - INE, Recenseamento da população e habitação - séries históricas",
+ "extracao": "2026-11-14T14:05:26.914Z",
+ "dados": {
+  "1950": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "2 034 251",
+    "valor": "2034251"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "sinal_conv": "x",
+    "sinal_conv_desc": "Dado não disponível",
+    "ind_string": "x"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "240 248",
+    "valor": "240248"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "2 274 499",
+    "valor": "2274499"
+   }
+  ],
+  "1960": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "2 338 740",
+    "valor": "2338740"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "sinal_conv": "x",
+    "sinal_conv_desc": "Dado não disponível",
+    "ind_string": "x"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "190 658",
+    "valor": "190658"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "2 529 398",
+    "valor": "2529398"
+   }
+  ],
+  "1970": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "2 252 695",
+    "valor": "2252695"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "75 570",
+    "valor": "75570"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "373 950",
+    "valor": "373950"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "2 702 715",
+    "valor": "2702715"
+   }
+  ],
+  "1981": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "2 769 048",
+    "valor": "2769048"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "423 504",
+    "valor": "423504"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "190 331",
+    "valor": "190331"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "3 382 883",
+    "valor": "3382883"
+   }
+  ],
+  "1991": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "3 055 512",
+    "valor": "3055512"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "377 608",
+    "valor": "377608"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "721 855",
+    "valor": "721855"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "4 154 975",
+    "valor": "4154975"
+   }
+  ],
+  "2001": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "3 551 229",
+    "valor": "3551229"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "924 419",
+    "valor": "924419"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "543 777",
+    "valor": "543777"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "5 019 425",
+    "valor": "5019425"
+   }
+  ],
+  "2011": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "3 991 112",
+    "valor": "3991112"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "1 133 300",
+    "valor": "1133300"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "735 128",
+    "valor": "735128"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "5 859 540",
+    "valor": "5859540"
+   }
+  ],
+  "2021": [
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "1",
+    "dim_3_t": "Residência habitual",
+    "ind_string": "4 142 581",
+    "valor": "4142581"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "2",
+    "dim_3_t": "Residência secundária",
+    "ind_string": "1 104 881",
+    "valor": "1104881"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "3",
+    "dim_3_t": "Vago",
+    "ind_string": "696 194",
+    "valor": "696194"
+   },
+   {
+    "geocod": "PT",
+    "geodsg": "Portugal",
+    "dim_3": "T",
+    "dim_3_t": "Total",
+    "ind_string": "5 970 677",
+    "valor": "5970677"
+   }
+  ]
+ }
+}

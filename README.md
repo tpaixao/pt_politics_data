@@ -9,6 +9,7 @@ shared tidy builder. All stdlib-only Python 3.11+ (host has no pandas).
 ```bash
 python3 fetch_housing.py && python3 fetch_salaries.py      # ~2-4 min each, API retries built in
 python3 fetch_immigration.py && python3 fetch_wealth.py
+python3 fetch_housing_stock.py                             # Censos stock/tenure + Eurostat tenure
 python3 build_tidy.py
 python3 fetch_fund_management.py                           # BdP/BPstat real-estate funds (standalone)
 ```
@@ -21,7 +22,33 @@ python3 fetch_fund_management.py                           # BdP/BPstat real-est
 - `housing_annual_medians.csv` — median selling price EUR/m² (2019–2025) and
   median rent of new contracts EUR/m² (2020–2025)
 
+### Housing stock and tenure (INE Censos, Eurostat EU-SILC)
+- `housing_census_occupation.csv` — classic family dwellings by occupation
+  status, decennial 1950–2021. 2021: 4,142,581 habitual (69.4%), 1,104,881
+  seasonal/secondary (18.5%), 696,194 vacant, total 5,970,677.
+  Caveat: in the historical series the 2021 rows leave a 27,021-dwelling gap
+  between Total and the sum of the parts (INE's own historical-series
+  categorization); the Censos 2021 stock indicator (`housing_census_stock.csv`)
+  puts vacant at 723,215 (348,097 for sale/rent + 375,118 other reasons).
+  Prefer the Censos 2021 splits for 2021; use this series for the long view.
+- `housing_census_tenure.csv` — habitually-occupied residences by tenure,
+  Censos 2011 + 2021 in INE's comparable grouping: 2021 owner 2,900,093
+  (70.0%), rented 922,810 (22.3%), other (cedido sem renda etc.) 319,678
+  (7.7%). The 2011 row is INE's recategorized version (cooperative ownership
+  counted under propriedade), not the original 2011 detail.
+- `housing_census_tenure_2011.csv` — Censos 2011 regime-of-occupation detail
+  (fixed-term vs indefinite lease, social rent, cooperative, etc.)
+- `housing_census_stock.csv` — Censos 2021 stock, long form: total
+  5,981,482 dwellings, of which classic family 5,970,677, non-classic
+  4,042, collective 6,763; plus building-type and vacancy splits.
+- `housing_eusilc_tenure.csv` — tenure status of the POPULATION (Eurostat
+  ilc_lvho02, EU-SILC), 2004–2025, % of population: owner 71.2% in 2025
+  (peak 78.3% in 2021), market-rent tenants 16.3% in 2025 vs 10.9% in 2021.
+  Person-weighted survey shares — NOT comparable with the census dwelling
+  counts above; cite one or the other, never mix.
+
 ### Salaries (INE / MTSSS-GEP Quadros de Pessoal)
+- `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
 - `salaries_annual.csv` — average monthly base remuneration EUR, Portugal,
   by sex and age group (2021–2024, current methodology)
 - `salaries_annual_rem.csv` — average ANNUAL remuneration per employee
@@ -81,10 +108,11 @@ BdP/BPstat statistics: free reuse with attribution to Banco de Portugal.
 Complementary non-INE sources for context (not fetched):
 - Pordata: same INE data repackaged + per-m² from escrituras
 - Banco de Portugal: housing statistics, HFCS; investment-fund balance sheets are fetched via BPstat in this repo
-- Eurostat: ilc series for EU comparisons (ilc_di12 Gini, ilc_di11 S80/S20), prc_hpi_q
+- Eurostat: ilc series for EU comparisons (ilc_di12 Gini, ilc_di11 S80/S20), prc_hpi_q;
+  ilc_lvho02 (tenure of population) is fetched (`fetch_housing_stock.py`)
 
 ## Refresh
-Re-run the four fetch scripts then `build_tidy.py`. Most recent INE values
+Re-run the five fetch scripts then `build_tidy.py`. Most recent INE values
 can be provisional (flagged 'd'/'provisório' by INE); refetching picks up
 revisions. The API is flaky (503/timeouts) — fetch scripts retry with backoff;
 allow ~5–10 min for a full refresh.

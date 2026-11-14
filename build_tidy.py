@@ -15,6 +15,16 @@ Outputs (data/tidy/):
   immigration_totals.csv       - compact: migratory balance, foreign resident
                                  stock (total), permanent immigrant inflow
   inequality_annual.csv        - income Gini and S80/S20 (EU-SILC/ICV)
+  housing_census_occupation.csv - classic family dwellings by occupation
+                                  status (habitual/secondary/empty), Censos
+                                  1950-2021
+  housing_census_tenure.csv     - habitual residences by tenure (owner/
+                                  rented/other), Censos 2011 + 2021
+  housing_census_tenure_2011.csv - Censos 2011 regime-of-occupation detail
+  housing_census_stock.csv      - all dwellings by type/occupation/building,
+                                  Censos 2021
+  housing_eusilc_tenure.csv     - tenure status of the population (EU-SILC,
+                                  % of population), annual 2004-2025
   _indicators.json             - indicator descriptions fetched for audit
 """
 
@@ -22,8 +32,8 @@ import csv
 import json
 import os
 
-from common import (TIDY_DIR, load_series, norm_quarter, num, periods_of,
-                    pt_records)
+from common import (RAW_DIR, TIDY_DIR, load_series, norm_quarter, num,
+                    periods_of, pt_records)
 
 
 def write_csv(name, cols, rows):
@@ -94,6 +104,106 @@ def housing():
              for y in years]
     write_csv('housing_annual_medians.csv',
               ['ano', 'mediano_vendas_eur_m2', 'mediano_rendas_novos_contratos_eur_m2'], rows2)
+
+
+def housing_stock():
+    # occupation status of classic family dwellings (0014378, 1950-2021)
+    s = load_series('0014378')
+    rows = []
+    for p, recs in periods_of(s):
+        m = {r.get('dim_3_t', ''): num(r.get('valor')) for r in pt_records(recs)}
+        rows.append({'censo_ano': p,
+                     'residencia_habitual': m.get('Residência habitual', ''),
+                     'residencia_secundaria': m.get('Residência secundária', ''),
+                     'vago': m.get('Vago', ''),
+                     'total': m.get('Total', '')})
+    write_csv('housing_census_occupation.csv',
+              ['censo_ano', 'residencia_habitual', 'residencia_secundaria',
+               'vago', 'total'], rows)
+
+    # tenure of habitual residences, comparable categories (0011491: 2011
+    # recategorized to match Censos 2021 grouping + 2021)
+    s = load_series('0011491')
+    rows = []
+    for p, recs in periods_of(s):
+        for r in pt_records(recs):
+            rows.append({'censo_ano': p,
+                         'regime_de_ocupacao': r.get('dim_3_t', ''),
+                         'residencias_habituais': num(r.get('valor'))})
+    rows.sort(key=lambda x: (x['censo_ano'], x['regime_de_ocupacao']))
+    write_csv('housing_census_tenure.csv',
+              ['censo_ano', 'regime_de_ocupacao', 'residencias_habituais'], rows)
+
+    # Censos 2011 original regime-of-occupation detail (0006338)
+    s = load_series('0006338')
+    rows = []
+    for p, recs in periods_of(s):
+        for r in pt_records(recs):
+            rows.append({'censo_ano': p,
+                         'regime_de_ocupacao': r.get('dim_3_t', ''),
+                         'residencias_habituais': num(r.get('valor'))})
+    rows.sort(key=lambda x: (x['censo_ano'], x['regime_de_ocupacao']))
+    write_csv('housing_census_tenure_2011.csv',
+              ['censo_ano', 'regime_de_ocupacao', 'residencias_habituais'], rows)
+
+    # all dwellings by type, occupation status and building (0012499, 2021)
+    s = load_series('0012499')
+    rows = []
+    for p, recs in periods_of(s):
+        for r in pt_records(recs):
+            rows.append({'censo_ano': p,
+                         'categoria': r.get('dim_3_t', ''),
+                         'alojamentos': num(r.get('valor'))})
+    rows.sort(key=lambda x: (x['censo_ano'], x['categoria']))
+    write_csv('housing_census_stock.csv',
+              ['censo_ano', 'categoria', 'alojamentos'], rows)
+
+    # tenure status of the population, annual (Eurostat ilc_lvho02, EU-SILC)
+    with open(os.path.join(RAW_DIR, 'eurostat_ilc_lvho02.json'),
+              encoding='utf-8') as f:
+        eu = json.load(f)
+    order = list(eu['dimension'].keys())
+    id_of = {dim: dict(eu['dimension'][dim]['category']['index'])
+             for dim in order}
+    strides = {}
+    mult = 1
+    for dim in reversed(order):
+        strides[dim] = mult
+        mult *= len(id_of[dim])
+
+    def value_row(tenure, year):
+        """Flat-index lookup; fixed codes verified against dimension keys:
+        freq=A, rskpovth=TOTAL, hhcomp=TOTAL, unit=PC, geo=PT."""
+        idx = 0
+        for dim in order:
+            code = {'freq': 'A', 'rskpovth': 'TOTAL', 'hhcomp': 'TOTAL',
+                    'tenure': tenure, 'unit': 'PC', 'geo': 'PT',
+                    'time': str(year)}[dim]
+            idx += id_of[dim][code] * strides[dim]
+        return eu['value'].get(str(idx))
+
+    years = sorted(eu['dimension']['time']['category']['index'],
+                   key=lambda y: int(y))
+    rows = []
+    for y in years:
+        r = {'ano': y}
+        vals = []
+        for col, ten in [('owner_pct', 'OWN'),
+                         ('owner_with_loan_pct', 'OWN_L'),
+                         ('owner_without_loan_pct', 'OWN_NL'),
+                         ('tenant_pct', 'RENT'),
+                         ('tenant_market_rent_pct', 'RENT_MKT'),
+                         ('tenant_reduced_or_free_pct', 'RENT_FR')]:
+            v = value_row(ten, y)
+            r[col] = v if v is not None else ''
+            if v is not None:
+                vals.append(v)
+        if vals:  # drop fully-empty years (2003)
+            rows.append(r)
+    write_csv('housing_eusilc_tenure.csv',
+              ['ano', 'owner_pct', 'owner_with_loan_pct',
+               'owner_without_loan_pct', 'tenant_pct',
+               'tenant_market_rent_pct', 'tenant_reduced_or_free_pct'], rows)
 
 
 def salaries():
@@ -198,11 +308,13 @@ def inequality():
 def main():
     os.makedirs(TIDY_DIR, exist_ok=True)
     housing()
+    housing_stock()
     salaries()
     immigration()
     inequality()
     meta = {}
     for var in ('0014765', '0014766', '0014767', '0014764', '0012254', '0014698',
+                '0014378', '0011491', '0006338', '0012499',
                 '0014410', '0014111',
                 '0013179', '0006054', '0006055', '0006056', '0006057', '0001274',
                 '0013219', '0004212', '0004213'):
